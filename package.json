@@ -8,8 +8,8 @@
     "start": "nodemon app.js"
   },
   "engines": {
-    "node": "13.9.0",
-    "npm": "6.13.7"
+    "node": "13.9.0"
+
   },
   "keywords": [],
   "author": "",
