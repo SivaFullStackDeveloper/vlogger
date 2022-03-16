@@ -81,7 +81,7 @@ router.route("/add").post(token,(req,res)=>{
     }
  
 })
-router.route("/checkProfile/:email").get(token,async (req, res) => {
+router.route("/checkProfile").get(token,async (req, res) => {
    await  profile.findOne({ email: req.decoded.email }, (err, result) => {
       if (err) return res.json({ err: err });
       else if (result == null) {
