@@ -31,8 +31,8 @@ const upload = multer({
   }
 })
 
-router.patch('/add/image',token,upload.single("img"),async(req,res)=>{
-  await profile.findOneAndUpdate({email:req.decoded.email},
+router.patch('/add/image',token,upload.single("img"),(req,res)=>{
+   profile.findOneAndUpdate({email:req.decoded.email},
     {$set:{img:req.file.path}},(err,result)=>{
     if(err){
       res.send(err);

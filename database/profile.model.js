@@ -3,13 +3,7 @@ const mongoose = require('mongoose');
 const schema = mongoose.Schema;
 
 const profile = new schema({
-    email:{
-       type:String,
-         required:true,
-            unique:true,
-
-      
-    },
+    
     name: {
         type:String},
     
